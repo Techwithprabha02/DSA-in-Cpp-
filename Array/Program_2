@@ -1,0 +1,33 @@
+// 1.2 Employee ID Verification
+// The HR department maintains a sorted list of employee IDs for all active employees. To improve
+// the efficiency of employee verification, you are required to implement a binary search algorithm
+// to check whether a given employee ID exists in the list.
+#include <iostream>
+using namespace std;
+ 
+int main(){
+    int n,arr[n];
+    cout<<"enter the total number of employee:";
+    cin>>n;
+    
+    cout<<"enter the ID of the employee:";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int key,index;
+    cout<<"enter the ID to search:";
+    cin>>key;
+    for(int i=0;i<n;i++){
+        if(arr[i]==key){
+            index=i;
+            break;
+        }
+    }
+    if(index != -1){
+        cout<<"employee ID found at index position:"<<index<<endl;
+    }
+    else{
+    cout<<"employee ID is not found :"<<endl;
+    }
+    return 0;
+}
