@@ -1,0 +1,45 @@
+//Perform Binary Search 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	int x;
+	int mid;
+	cout<<"Enter the number of element in Array:"<<endl;
+	cin>>n;
+	
+	int arr[n];
+    cout<<"Enter the element of Array"<<endl;
+	for(int i=0;i<n;i++){
+	 cin>>arr[i];
+    } 
+    
+    cout<<"enter the value which you want to find"<<endl;
+    cin>>x;
+    
+    int low=0,high=n-1;
+    bool search=false;
+    
+    while(low<=high){
+     mid=(low+high)/2;
+      if(arr[mid]==x){
+        cout<<"Search is Successfull!!"<<endl;
+         search=true;
+        break;
+     }
+      else if(arr[mid]>x){
+        low=low;
+        high=mid-1;
+     }
+     else{
+        high=high;
+        low=mid+1;
+    }
+    }
+    if(!search) {
+        cout<<"Search not found!! "<<endl;
+    }
+    return 0;
+    }
